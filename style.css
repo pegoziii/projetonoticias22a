@@ -44,6 +44,7 @@ header button {
 border: none;
 background: none;
 width: fit-content;
+cursor: pointer;
 }
 
 header nav.mobile {
@@ -75,6 +76,10 @@ text-decoration: none;
 color: var(--dark-blue);
 font-size: 1.125rem;
 line-height: 1.5rem;
+}
+
+header .desktop {
+    display: none;
 }
 
 main {
@@ -115,7 +120,7 @@ margin-bottom: 1.5rem;
     font-size: 0.875rem;
     letter-spacing: 0.275rem;
     line-height: 1.5rem;
-    cursor: pointer; 
+    align-self: flex-start;
 }
 
 .segunda-secao {
@@ -168,6 +173,10 @@ font-size: 2rem;
 line-height: 100%;
 }
 
+.terceira-secao a {
+    text-decoration: none;
+}
+
 .terceira-secao h2 {
 color: var(--dark-blue);
 font-size: 1.125rem;
@@ -183,6 +192,19 @@ color: var(--gummeta1)
 }
 
 @media(min-width: 1110px) {
+
+    
+    header > button {
+        display: none;
+    }
+    header .desktop {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    header .desktop a:hover {
+        color: var(--vermillion);
+    }
 
     main {
         display: grid;
@@ -210,17 +232,24 @@ color: var(--gummeta1)
         font-size: 3.5rem;
     }
 
+    .primeira-secao button:hover {
+        background-color: var(--dark-blue);
+        cursor: pointer;
+    }
+    
     .segunda-secao h2 {
         font-size: 2.5rem;
     }
     
-    header > button {
-        display: none;
-    }
-    header .desktop {
+    .terceira-secao {
         display: flex;
-        gap: 2.5rem;
+        grid-column: 1 / 4;
     }
+    
+    .terceira-secao h2:hover {
+        color: var(--vermillion);
+    }
+    
 }
 
 header .desktop a {
