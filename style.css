@@ -106,15 +106,16 @@ margin-bottom: 1.5rem;
 }
 
 .primeira-secao button {
-padding: 0.75rem 2rem;
-background-color: var(--vermillion);
-border: none;
-text-transform: uppercase;
-color: var(--almost-white);
-font-weight: 700;
-font-size: 0.875rem;
-letter-spacing: 0.275rem;
-line-height: 1.5rem;
+    padding: 0.75rem 2rem;
+    background-color: var(--vermillion);
+    border: none;
+    text-transform: uppercase;
+    color: var(--almost-white);
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.275rem;
+    line-height: 1.5rem;
+    cursor: pointer; 
 }
 
 .segunda-secao {
@@ -191,9 +192,28 @@ color: var(--gummeta1)
 
     .primeira-secao {
         grid-column: 1 / 3;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.75rem;
     }
 
+    .primeira-secao picture {
+        grid-column: 1 / 3;
+    }
 
+    .primeira-secao img {
+        margin: 0;
+    }
+    
+    .primeira-secao h1 {
+        font-size: 3.5rem;
+    }
+
+    .segunda-secao h2 {
+        font-size: 2.5rem;
+    }
+    
     header > button {
         display: none;
     }
